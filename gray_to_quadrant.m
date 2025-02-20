@@ -4,13 +4,13 @@ function q = gray_to_quadrant(bits)
     
     for i = 1:size(bits,2)
         if isequal(bits(:,i), [1;1])              % isequal()?????
-            q(i) = 0; % 11 -> 第 0 象限
+            q(i) = 3 ; % 11 -> 第 0 象限
         elseif isequal(bits(:,i), [0;1])
             q(i) = 1; % 01 -> 第 1 象限
         elseif isequal(bits(:,i), [0;0])
-            q(i) = 2; % 00 -> 第 2 象限
+            q(i) = 0; % 00 -> 第 2 象限
         elseif isequal(bits(:,i), [1;0])
-            q(i) = 3; % 10 -> 第 3 象限
+            q(i) = 2; % 10 -> 第 3 象限
         end
     end
 end

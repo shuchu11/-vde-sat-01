@@ -1,7 +1,7 @@
 function iq_values = qpsk_to_iq(qpsk_symbols)
     % QPSK 對應的 IQ 值 (Gray 編碼)
     qpsk_map = containers.Map({0, 1, 2, 3}, ...
-                              {1+1j, -1+1j, -1-1j, 1-1j});
+                              {exp(1i*(pi/4)), exp(1i*(-pi/4)), exp(1i*(pi*3/4)), exp(1i*(-pi*3/4))});
     
     % 初始化 IQ 值陣列
     iq_values = zeros(size(qpsk_symbols));
